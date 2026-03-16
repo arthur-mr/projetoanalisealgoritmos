@@ -1,12 +1,88 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\aredin\\projetoanalisealgoritmos\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{86C6F556-E79B-417C-B3F6-BC470C56642D}|Trabalho1\\Trabalho1.csproj|c:\\users\\aredin\\projetoanalisealgoritmos\\trabalho1\\servicos\\pedidoservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86C6F556-E79B-417C-B3F6-BC470C56642D}|Trabalho1\\Trabalho1.csproj|solutionrelative:trabalho1\\servicos\\pedidoservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86C6F556-E79B-417C-B3F6-BC470C56642D}|Trabalho1\\Trabalho1.csproj|c:\\users\\aredin\\projetoanalisealgoritmos\\trabalho1\\modelos\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86C6F556-E79B-417C-B3F6-BC470C56642D}|Trabalho1\\Trabalho1.csproj|solutionrelative:trabalho1\\modelos\\pedido.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{86C6F556-E79B-417C-B3F6-BC470C56642D}|Trabalho1\\Trabalho1.csproj|c:\\users\\aredin\\projetoanalisealgoritmos\\trabalho1\\servicos\\calculadorentregasservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86C6F556-E79B-417C-B3F6-BC470C56642D}|Trabalho1\\Trabalho1.csproj|solutionrelative:trabalho1\\servicos\\calculadorentregasservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{3FA9818D-CCE8-416C-8855-A9FC87178757}|Trabalho1.Testes\\Trabalho1.Testes.csproj|c:\\users\\aredin\\projetoanalisealgoritmos\\trabalho1.testes\\pedidoservicoteste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{3FA9818D-CCE8-416C-8855-A9FC87178757}|Trabalho1.Testes\\Trabalho1.Testes.csproj|solutionrelative:trabalho1.testes\\pedidoservicoteste.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Pedido.cs",
+              "DocumentMoniker": "C:\\Users\\aredin\\projetoanalisealgoritmos\\Trabalho1\\Modelos\\Pedido.cs",
+              "RelativeDocumentMoniker": "Trabalho1\\Modelos\\Pedido.cs",
+              "ToolTip": "C:\\Users\\aredin\\projetoanalisealgoritmos\\Trabalho1\\Modelos\\Pedido.cs",
+              "RelativeToolTip": "Trabalho1\\Modelos\\Pedido.cs",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAowBYAAAAPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T23:13:22.926Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "PedidoServico.cs",
+              "DocumentMoniker": "C:\\Users\\aredin\\projetoanalisealgoritmos\\Trabalho1\\Servicos\\PedidoServico.cs",
+              "RelativeDocumentMoniker": "Trabalho1\\Servicos\\PedidoServico.cs",
+              "ToolTip": "C:\\Users\\aredin\\projetoanalisealgoritmos\\Trabalho1\\Servicos\\PedidoServico.cs",
+              "RelativeToolTip": "Trabalho1\\Servicos\\PedidoServico.cs",
+              "ViewState": "AgIAABEAAAAAAAAAAAAcwBsAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T23:13:07.491Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "PedidoServicoTeste.cs",
+              "DocumentMoniker": "C:\\Users\\aredin\\projetoanalisealgoritmos\\Trabalho1.Testes\\PedidoServicoTeste.cs",
+              "RelativeDocumentMoniker": "Trabalho1.Testes\\PedidoServicoTeste.cs",
+              "ToolTip": "C:\\Users\\aredin\\projetoanalisealgoritmos\\Trabalho1.Testes\\PedidoServicoTeste.cs",
+              "RelativeToolTip": "Trabalho1.Testes\\PedidoServicoTeste.cs",
+              "ViewState": "AgIAAJcAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T23:09:03.215Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CalculadorEntregasServico.cs",
+              "DocumentMoniker": "C:\\Users\\aredin\\projetoanalisealgoritmos\\Trabalho1\\Servicos\\CalculadorEntregasServico.cs",
+              "RelativeDocumentMoniker": "Trabalho1\\Servicos\\CalculadorEntregasServico.cs",
+              "ToolTip": "C:\\Users\\aredin\\projetoanalisealgoritmos\\Trabalho1\\Servicos\\CalculadorEntregasServico.cs",
+              "RelativeToolTip": "Trabalho1\\Servicos\\CalculadorEntregasServico.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAcAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T23:06:18.159Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }

@@ -15,10 +15,12 @@ public class Pedido : EntidadeBase
     }
 
     public Pedido(
+        Guid id,
         List<Livro> livros,
         ModalidadeEntrega modalidadeEntrega,
         decimal valorEntrega)
     {
+        Id = id;
         Livros = livros;
         ModalidadeEntrega = modalidadeEntrega;
         ValorEntrega = valorEntrega;

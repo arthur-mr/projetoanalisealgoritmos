@@ -26,6 +26,7 @@ internal sealed class PedidoServico : IPedidoServico
         var valorEntrega = calculadorEntregaServico.CalcularValorEntrega(pedidoContrato.Modalidade, pesoTotalEmKg);
         
         var pedido = new Pedido(
+            id: pedidoId,
             livros: livros,
             modalidadeEntrega: pedidoContrato.Modalidade,
             valorEntrega: valorEntrega);
