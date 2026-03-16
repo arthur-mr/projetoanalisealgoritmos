@@ -1,12 +1,37 @@
 {
   "Version": 1,
   "WorkspaceRootPath": "C:\\Users\\aredin\\projetoanalisealgoritmos\\",
-  "Documents": [],
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{86C6F556-E79B-417C-B3F6-BC470C56642D}|Trabalho1\\Trabalho1.csproj|c:\\users\\aredin\\projetoanalisealgoritmos\\trabalho1\\servicos\\calculadorentregasservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{86C6F556-E79B-417C-B3F6-BC470C56642D}|Trabalho1\\Trabalho1.csproj|solutionrelative:trabalho1\\servicos\\calculadorentregasservico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
   "DocumentGroupContainers": [
     {
       "Orientation": 0,
       "VerticalTabListWidth": 256,
-      "DocumentGroups": []
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "CalculadorEntregasServico.cs",
+              "DocumentMoniker": "C:\\Users\\aredin\\projetoanalisealgoritmos\\Trabalho1\\Servicos\\CalculadorEntregasServico.cs",
+              "RelativeDocumentMoniker": "Trabalho1\\Servicos\\CalculadorEntregasServico.cs",
+              "ToolTip": "C:\\Users\\aredin\\projetoanalisealgoritmos\\Trabalho1\\Servicos\\CalculadorEntregasServico.cs",
+              "RelativeToolTip": "Trabalho1\\Servicos\\CalculadorEntregasServico.cs",
+              "ViewState": "AgIAAA0AAAAAAAAAAAAgwAcAAABLAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-03-16T23:06:18.159Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
