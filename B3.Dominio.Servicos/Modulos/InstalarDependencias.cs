@@ -12,6 +12,7 @@ public static class InstalarDependencias
         servicos.AddScoped<IAcaoServico, AcaoServico>();
         servicos.AddScoped<IOrdemServico, OrdemServico>();
         servicos.AddScoped<IEmailServico, EmailServico>();
+        servicos.AddScoped<IInvestidorServico, InvestidorServico>();
         servicos.AddScoped<IPublicadorMensagemServico, PublicadorMensagemServico>();
         servicos.AdicionarConfiguracoes(configuracoes);
         servicos.AdicionarBancoDeDados(configuracoes);
