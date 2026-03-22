@@ -1,0 +1,17 @@
+C:\Users\Usuário\source\repos\B3\B3.Infra\obj\Debug\net8.0\B3.Infra.csproj.AssemblyReference.cache
+C:\Users\Usuário\source\repos\B3\B3.Infra\obj\Debug\net8.0\B3.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Usuário\source\repos\B3\B3.Infra\obj\Debug\net8.0\B3.Infra.AssemblyInfoInputs.cache
+C:\Users\Usuário\source\repos\B3\B3.Infra\obj\Debug\net8.0\B3.Infra.AssemblyInfo.cs
+C:\Users\Usuário\source\repos\B3\B3.Infra\obj\Debug\net8.0\B3.Infra.csproj.CoreCompileInputs.cache
+C:\Users\Usuário\source\repos\B3\B3.Infra\bin\Debug\net8.0\B3.Infra.deps.json
+C:\Users\Usuário\source\repos\B3\B3.Infra\bin\Debug\net8.0\B3.Infra.runtimeconfig.json
+C:\Users\Usuário\source\repos\B3\B3.Infra\bin\Debug\net8.0\B3.Infra.dll
+C:\Users\Usuário\source\repos\B3\B3.Infra\bin\Debug\net8.0\B3.Infra.pdb
+C:\Users\Usuário\source\repos\B3\B3.Infra\bin\Debug\net8.0\B3.Dominio.dll
+C:\Users\Usuário\source\repos\B3\B3.Infra\bin\Debug\net8.0\B3.Dominio.pdb
+C:\Users\Usuário\source\repos\B3\B3.Infra\obj\Debug\net8.0\B3.Infra.csproj.Up2Date
+C:\Users\Usuário\source\repos\B3\B3.Infra\obj\Debug\net8.0\B3.Infra.dll
+C:\Users\Usuário\source\repos\B3\B3.Infra\obj\Debug\net8.0\refint\B3.Infra.dll
+C:\Users\Usuário\source\repos\B3\B3.Infra\obj\Debug\net8.0\B3.Infra.pdb
+C:\Users\Usuário\source\repos\B3\B3.Infra\obj\Debug\net8.0\B3.Infra.genruntimeconfig.cache
+C:\Users\Usuário\source\repos\B3\B3.Infra\obj\Debug\net8.0\ref\B3.Infra.dll
