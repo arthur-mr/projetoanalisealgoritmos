@@ -2,23 +2,22 @@
 using B3.Dominio.Enumeradores;
 using B3.Dominio.Excecoes;
 using B3.Dominio.Interfaces;
-using B3.Dominio.Mensagens;
 using B3.Dominio.Modelos;
 using Microsoft.EntityFrameworkCore;
 using System.Runtime.CompilerServices;
 
-[assembly:InternalsVisibleTo("B3.Testes")]
+[assembly: InternalsVisibleTo("B3.Testes")]
 namespace B3.Dominio.Servicos.Servicos;
 
 internal sealed class OrdemServico : IOrdemServico
 {
     private readonly IRepositorioBase repositorio;
-    private readonly IPublicadorMensagemServico publicadorMensagemServico;
+    private readonly IInvestidorServico investidorServico;
 
-    public OrdemServico(IRepositorioBase repositorio, IPublicadorMensagemServico publicadorMensagemServico)
+    public OrdemServico(IRepositorioBase repositorio, IInvestidorServico investidorServico)
     {
         this.repositorio = repositorio;
-        this.publicadorMensagemServico = publicadorMensagemServico;
+        this.investidorServico = investidorServico;
     }
 
     public async Task<RetornoRegistrarOrdemContrato> RegistrarOrdemAsync(RegistrarOrdemContrato contrato, CancellationToken cancellationToken = default)
@@ -83,8 +82,7 @@ internal sealed class OrdemServico : IOrdemServico
                 throw;
             }
 
-            var mensagem = new PrecoAcaoAlterado(AcaoId: acao.Id);
-            publicadorMensagemServico.Publicar(mensagem);
+            await investidorServico.NotificarInvestidoresInteressadosNaAcaoAsync(acao.Id, cancellationToken);
 
             return new RetornoRegistrarOrdemContrato(
                 OrdemId: ordem.Id,
