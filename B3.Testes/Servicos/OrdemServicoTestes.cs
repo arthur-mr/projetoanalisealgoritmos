@@ -15,7 +15,7 @@ public sealed class OrdemServicoTestes : IDisposable
 {
     private readonly ContextoTeste contexto;
     private readonly Mock<IDbContextTransaction> transacaoMock;
-    private readonly Mock<IPublicadorMensagemServico> publicadorMock;
+    private readonly Mock<IAcaoServico> acaoServicoMock;
     private readonly IRepositorioBase repositorio;
     private readonly IOrdemServico servico;
 
@@ -27,10 +27,10 @@ public sealed class OrdemServicoTestes : IDisposable
 
         contexto = new ContextoTeste(options);
         transacaoMock = new Mock<IDbContextTransaction>(MockBehavior.Loose);
-        publicadorMock = new Mock<IPublicadorMensagemServico>(MockBehavior.Loose);
+        acaoServicoMock = new Mock<IAcaoServico>(MockBehavior.Loose);
 
         repositorio = new RepositorioBaseFake(contexto, transacaoMock.Object);
-        servico = new OrdemServico(repositorio, publicadorMock.Object);
+        servico = new OrdemServico(repositorio, acaoServicoMock.Object);
     }
 
     public void Dispose()
@@ -51,7 +51,7 @@ public sealed class OrdemServicoTestes : IDisposable
             servico.RegistrarOrdemAsync(contrato, CancellationToken.None));
 
         Assert.Equal("O valor da ordem deve ser maior que zero.", excecao.Message);
-        publicadorMock.Verify(x => x.Publicar(It.IsAny<PrecoAcaoAlterado>()), Times.Never);
+        acaoServicoMock.Verify(x => x.NotificarAlteracaoParaInvestidoresAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()), Times.Never);
     }
 
     [Fact]
@@ -70,8 +70,8 @@ public sealed class OrdemServicoTestes : IDisposable
         var excecao = await Assert.ThrowsAsync<InvestidorExcecao>(() =>
             servico.RegistrarOrdemAsync(contrato, CancellationToken.None));
 
-        Assert.Equal("Investidor não encontrado.", excecao.Message);
-        publicadorMock.Verify(x => x.Publicar(It.IsAny<PrecoAcaoAlterado>()), Times.Never);
+        Assert.Equal("Investidor não encontrado.", excecao.Message); 
+        acaoServicoMock.Verify(x => x.NotificarAlteracaoParaInvestidoresAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()), Times.Never);
     }
 
     [Fact]
@@ -91,7 +91,7 @@ public sealed class OrdemServicoTestes : IDisposable
             servico.RegistrarOrdemAsync(contrato, CancellationToken.None));
 
         Assert.Equal("Ação não encontrada.", excecao.Message);
-        publicadorMock.Verify(x => x.Publicar(It.IsAny<PrecoAcaoAlterado>()), Times.Never);
+        acaoServicoMock.Verify(x => x.NotificarAlteracaoParaInvestidoresAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()), Times.Never);
     }
 
     [Fact]
@@ -124,7 +124,7 @@ public sealed class OrdemServicoTestes : IDisposable
         Assert.Equal(investidor.Id, ordemSalva.InvestidorId);
         Assert.Equal(acao.Id, ordemSalva.AcaoId);
 
-        publicadorMock.Verify(x => x.Publicar(It.IsAny<PrecoAcaoAlterado>()), Times.Never);
+        acaoServicoMock.Verify(x => x.NotificarAlteracaoParaInvestidoresAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()), Times.Never);
         transacaoMock.Verify(x => x.CommitAsync(It.IsAny<CancellationToken>()), Times.Never);
     }
 
@@ -172,10 +172,7 @@ public sealed class OrdemServicoTestes : IDisposable
         var acaoAtualizada = await contexto.Acoes.SingleAsync(x => x.Id == acao.Id);
         Assert.Equal(24m, acaoAtualizada.ValorAtual);
 
-        publicadorMock.Verify(
-            x => x.Publicar(It.Is<PrecoAcaoAlterado>(m => m.AcaoId == acao.Id)),
-            Times.Once);
-
+        acaoServicoMock.Verify(x => x.NotificarAlteracaoParaInvestidoresAsync(It.IsAny<Guid>(), It.IsAny<CancellationToken>()), Times.Once);
         transacaoMock.Verify(x => x.CommitAsync(It.IsAny<CancellationToken>()), Times.Once);
         transacaoMock.Verify(x => x.RollbackAsync(It.IsAny<CancellationToken>()), Times.Never);
     }

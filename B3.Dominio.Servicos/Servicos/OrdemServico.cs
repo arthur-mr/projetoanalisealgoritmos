@@ -12,12 +12,12 @@ namespace B3.Dominio.Servicos.Servicos;
 internal sealed class OrdemServico : IOrdemServico
 {
     private readonly IRepositorioBase repositorio;
-    private readonly IInvestidorServico investidorServico;
+    private readonly IAcaoServico acaoServico;
 
-    public OrdemServico(IRepositorioBase repositorio, IInvestidorServico investidorServico)
+    public OrdemServico(IRepositorioBase repositorio, IAcaoServico acaoServico)
     {
         this.repositorio = repositorio;
-        this.investidorServico = investidorServico;
+        this.acaoServico = acaoServico;
     }
 
     public async Task<RetornoRegistrarOrdemContrato> RegistrarOrdemAsync(RegistrarOrdemContrato contrato, CancellationToken cancellationToken = default)
@@ -82,7 +82,7 @@ internal sealed class OrdemServico : IOrdemServico
                 throw;
             }
 
-            await investidorServico.NotificarInvestidoresInteressadosNaAcaoAsync(acao.Id, cancellationToken);
+            await acaoServico.NotificarAlteracaoParaInvestidoresAsync(acao.Id, cancellationToken);
 
             return new RetornoRegistrarOrdemContrato(
                 OrdemId: ordem.Id,
