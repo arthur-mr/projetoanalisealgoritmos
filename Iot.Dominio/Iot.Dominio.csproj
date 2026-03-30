@@ -13,7 +13,7 @@
 
   <ItemGroup>
     <Reference Include="AlgoritmosDotNet">
-      <HintPath>..\..\..\..\Downloads\AlgoritmosDotNet.dll</HintPath>
+      <HintPath>libs\AlgoritmosDotNet.dll</HintPath>
     </Reference>
   </ItemGroup>
 

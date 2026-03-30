@@ -22,11 +22,11 @@
     <ProjectReference Include="..\Iot.Dominio\Iot.Dominio.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Reference Include="AlgoritmosDotNet">
-      <HintPath>..\..\..\..\Downloads\AlgoritmosDotNet.dll</HintPath>
-    </Reference>
-  </ItemGroup>
+	<ItemGroup>
+		<Reference Include="AlgoritmosDotNet">
+			<HintPath>libs\AlgoritmosDotNet.dll</HintPath>
+		</Reference>
+	</ItemGroup>
 
   <ItemGroup>
     <Using Include="Xunit" />
